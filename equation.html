@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation Solver</title>
+    <link rel="stylesheet" href="equation.css">
+</head>
+<body>
+    <div class="main">
+        <h1 class="title">Equation Solver</h1>
+        <h5 class="subtitle">Choose the Degree of Equation</h5>
+        <select id="equationDegree" class="select-category">
+            <option value="">- Select -</option>
+            <option value="linear">Linear</option>
+            <option value="quadratic">Quadratic</option>
+            <option value="cubic">Cubic</option>
+        </select>
+
+        <div class="container" id="linearSection" style="display:none;">
+            <h2 class="category-title">Linear Equation</h2>
+            <h5 class="subtitle">Number of Variables</h5>
+            <select id="numVariables" class="select-category">
+                <option value="">- Select -</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <div id="linearInputs"></div>
+            <button onclick="solveLinear()" class="convert-button">Calculate</button>
+            <div class="result">
+                <p id="linearResult">Result will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="container" id="quadraticSection" style="display:none;">
+            <h2 class="category-title">Quadratic Equation</h2>
+            <div class="form-group">
+                <label for="qa">Coefficient a:</label>
+                <input type="number" id="qa" class="select-category">
+            </div>
+            <div class="form-group">
+                <label for="qb">Coefficient b:</label>
+                <input type="number" id="qb" class="select-category">
+            </div>
+            <div class="form-group">
+                <label for="qc">Coefficient c:</label>
+                <input type="number" id="qc" class="select-category">
+            </div>
+            <button onclick="solveQuadratic()" class="convert-button">Calculate</button>
+            <div class="result">
+                <p id="quadraticResult">Result will be displayed here</p>
+            </div>
+        </div>
+
+        <div class="container" id="cubicSection" style="display:none;">
+            <h2 class="category-title">Cubic Equation</h2>
+            <div class="form-group">
+                <label for="ca">Coefficient a:</label>
+                <input type="number" id="ca" class="select-category">
+            </div>
+            <div class="form-group">
+                <label for="cb">Coefficient b:</label>
+                <input type="number" id="cb" class="select-category">
+            </div>
+            <div class="form-group">
+                <label for="cc">Coefficient c:</label>
+                <input type="number" id="cc" class="select-category">
+            </div>
+            <div class="form-group">
+                <label for="cd">Coefficient d:</label>
+                <input type="number" id="cd" class="select-category">
+            </div>
+            <button onclick="solveCubic()" class="convert-button">Calculate</button>
+            <div class="result">
+                <p id="cubicResult">Result will be displayed here</p>
+            </div>
+        </div>
+    </div>
+    <script src="equation.js"></script>
+</body>
+</html>
