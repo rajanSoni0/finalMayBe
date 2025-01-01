@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="scientific_calculator_styles.css">
+</head>
+<body onload="startTime()">
+    <div class="cal-container">
+        <!-- clock -->
+        <div class="clock">
+            <p id="time">Time goes here</p>
+        </div>
+
+        <!-- screen -->
+        <div class="display">
+            <input type="text" id="screen" placeholder="0" readonly>
+        </div>
+
+        <!-- calculator keys -->
+        <div class="keys">
+            <p>
+                <input type="button" value="sin" class="btn btn-sign" onclick="press('sin(')">
+                <input type="button" value="cos" class="btn btn-sign" onclick="press('cos(')">
+                <input type="button" value="tan" class="btn btn-sign" onclick="press('tan(')">
+                <input type="button" value="sec" class="btn btn-sign" onclick="press('sec(')">
+                <input type="button" value="cosec" class="btn btn-sign" onclick="press('cosec(')">
+            </p>
+
+            <p>
+                <input type="button" value="cot" class="btn btn-sign" onclick="press('cot(')">
+                <input type="button" value="1/x" class="btn btn-sign" onclick="press('1/')">
+                <input type="button" value="eᵡ" class="btn btn-sign" onclick="press('exp(')">
+                <input type="button" value="x²" class="btn btn-sign" onclick="press('^2')">
+                <input type="button" value="x³" class="btn btn-sign" onclick="press('^3')">
+            </p>
+
+            <p>
+                <input type="button" value="xʸ" class="btn btn-sign" onclick="press('^(')">
+                <input type="button" value="|x|" class="btn btn-sign" onclick="press('abs(')">
+                <input type="button" value="x!" class="btn btn-sign" onclick="press('fact(')">
+                <input type="button" value="π" class="btn btn-sign" onclick="press(Math.PI)">
+                <input type="button" value="ln" class="btn btn-sign" onclick="press('log(')">
+            </p>
+
+            <p>
+                <input type="button" value="log" class="btn btn-sign" onclick="press('log10(')">
+                <input type="button" value="%" class="btn btn-sign" onclick="press('/100')">
+                <input type="button" value="2ˣ" class="btn btn-sign" onclick="press('2^(')">
+                <input type="button" value="√" class="btn btn-sign" onclick="press('sqrt(')">
+                <input type="button" value="³√" class="btn btn-sign" onclick="press('cbrt(')">
+            </p>
+
+            <p>
+                <input type="button" value="(" class="btn btn-sign" onclick="press('(')">
+                <input type="button" value=")" class="btn btn-sign" onclick="press(')')">
+            </p>
+
+            <p style="margin-top: 30px;">
+                <input type="button" value="7" class="btn btn-num" onclick="press(7)">
+                <input type="button" value="8" class="btn btn-num" onclick="press(8)">
+                <input type="button" value="9" class="btn btn-num" onclick="press(9)">
+                <input type="button" value="⌫" class="btn btn-red" onclick="backspace()">
+                <input type="button" value="AC" class="btn btn-red" onclick="clearScreen()">
+            </p>
+            <p>
+                <input type="button" value="4" class="btn btn-num" onclick="press(4)">
+                <input type="button" value="5" class="btn btn-num" onclick="press(5)">
+                <input type="button" value="6" class="btn btn-num" onclick="press(6)">
+                <input type="button" value="x" class="btn btn-opera" onclick="press('*')">
+                <input type="button" value="÷" class="btn btn-opera" onclick="press('/')">
+            </p>
+            <p>
+                <input type="button" value="1" class="btn btn-num" onclick="press(1)">
+                <input type="button" value="2" class="btn btn-num" onclick="press(2)">
+                <input type="button" value="3" class="btn btn-num" onclick="press(3)">
+                <input type="button" value="+" class="btn btn-opera" onclick="press('+')">
+                <input type="button" value="-" class="btn btn-opera" onclick="press('-')">
+            </p>
+            <p>
+                <input type="button" value="." class="btn btn-num" onclick="press('.')">
+                <input type="button" value="0" class="btn btn-num" onclick="press(0)">
+                <input type="button" value="+/-" class="btn btn-opera" onclick="press('(-')">
+                <input type="button" value="e" class="btn btn-opera" onclick="press(Math.E)">
+                <input style="background: green;" type="button" value="=" class="btn btn-opera" onclick="calculate()">
+            </p>
+        </div>
+
+    </div>
+    <script src="scientific_calculator_scripts.js"></script>
+</body>
+</html>
